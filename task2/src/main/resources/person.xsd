@@ -1,0 +1,39 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://itiv422.wklab.com/soap/dto"
+           targetNamespace="http://itiv422.wklab.com/soap/dto" elementFormDefault="qualified">
+
+    <xs:element name="getFriendsByPersonAndYearRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personId" type="xs:long" minOccurs="0"/>
+                <xs:element name="year" type="xs:long" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getFriendsByPersonAndYearResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="friends" type="tns:personDto" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="birthday">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="day" type="xs:long" minOccurs="0"/>
+                <xs:element name="month" type="xs:long" minOccurs="0"/>
+                <xs:element name="year" type="xs:long" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="personDto">
+        <xs:sequence>
+            <xs:element ref="tns:birthday" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
+
