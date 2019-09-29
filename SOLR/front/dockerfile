@@ -1,0 +1,6 @@
+FROM python:latest
+COPY . /srv
+WORKDIR /srv
+RUN pip install -r requirements.txt
+EXPOSE 5000
+CMD ["python", "srv.py"]

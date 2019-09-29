@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Searcher</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="css/lib/materialize.min.css">
+    <script src="js/lib/jquery-3.4.1.min.js"></script>
+    <script src="js/lib/materialize.min.js"></script>
+</head>
+<body>
+
+    <div id="modalBook" class="modal">
+        <div class="modal-content" id="pageContent"></div>
+        <div class="modal-footer" id="pageContentFooter"></div>
+    </div>
+
+    <div class="center"><img width="300" src="logo.png"></div>
+    <div class="row">
+        <div class="input-field s6 offset-s3">
+            <input id="search" type="text" class="validate">
+            <label for="search">Search</label>
+        </div>
+        <a class="waves-effect waves-light btn col offset-l1 offset-m1 l4 m4 s12 red" id="searchBtn">Search</a>
+        <a class="waves-effect waves-light btn col l4 m4 offset-l2 offset-m2 s12 red" id="superSearchBtn">SUPER Search</a>
+    </div>
+    
+    <h4 id="numberOfResults"></h4>
+    <div class="row hide hideSection">
+    <div class="col l3 m3 s12 ">
+        <ul class="collection" id="facets"></ul>
+        <a class="waves-effect waves-light red btn right test" id="facetBtn">Apply filters</a>
+    </div>
+    <div class="col l9 m9 s12 ">
+        <ul class="collection" id="results"></ul>
+        <ul class="pagination center" id="resultPages"></ul>
+    </div>
+    
+    </div>
+    
+    <script src="js/init.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

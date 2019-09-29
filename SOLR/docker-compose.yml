@@ -1,0 +1,10 @@
+version: '3'
+services:
+  front:
+    build: front
+    ports: 
+    - "5000:5000"
+  solrserver:
+    build: solrserver
+    ports: 
+    - "8983:8983"
