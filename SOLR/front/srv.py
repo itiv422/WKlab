@@ -4,7 +4,7 @@ from service.SolrService import SolrService
 
 app = Flask(__name__, static_url_path='')
 pageService = PageService('static/books', 21)
-solrService = SolrService('http://localhost:8983/solr/')  # solrserver
+solrService = SolrService('http://solrserver:8983/solr/')
 
 
 @app.route('/search', methods=['POST'])
@@ -28,4 +28,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port='5001')  # , host='front'
+    app.run(debug=True, host='front')
