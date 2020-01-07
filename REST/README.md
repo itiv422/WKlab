@@ -1,4 +1,4 @@
-# WK lab Rest service. Task 1 (1 variant)
+# WK lab Rest service.
 
 ## Prerequisites
 | Artifact  | Version  | 
