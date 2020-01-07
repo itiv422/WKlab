@@ -1,4 +1,4 @@
-# WK lab SOAP service (1 variant)
+# WK lab SOAP service
 
 ## Prerequisites
 | Artifact  | Version  | 
